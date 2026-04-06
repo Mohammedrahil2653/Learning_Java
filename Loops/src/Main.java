@@ -27,5 +27,16 @@ public class Main {
             case 3, 4, 5 -> System.out.println("the value may be " + switchvalue2);
             default -> System.out.println("was not 1,2,3,4,5");
         }
+
+        System.out.println("december is the"+getQuater("december")+" quater");
+    }
+    public static String getQuater(String month){
+        return switch(month){
+            case "January","February","march"->"!st Quater";
+            case "april","may","june"->"2nd Quater";
+            case "july","august","September"->"3rd quater";
+            case "october","november","december"-> "4th quater";
+            default ->"bad";
+        };
     }
 }
